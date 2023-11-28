@@ -1,20 +1,60 @@
-<html>
-    <form>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Título da página</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <form action="" id="formulario" method= "post" name="formulario">
         <p>
-            <label for="fname">Nome:</label><br>
-            <input type="text" id="fname" name="fname" value=""><br>
-            <label for="lname">Pontos:</label><br>
-            <input type="text" id="lname" name="lname" value=""><br>
-            <label for="fname">Nota:</label><br>
-            <input type="text" id="fname" name="fname" value=""><br>
-            <label for="lname">Universidade:</label><br>
-            <input type="text" id="lname" name="lname" value=""><br>
-            <label for="fname">Empresas:</label><br>
-            <input type="text" id="fname" name="fname" value=""><br>
-            <label for="lname">Avarts:</label><br>
-            <input type="text" id="lname" name="lname" value=""><br>
-            <label for="lname">Horarios:</label><br>
-            <input type="text" id="lname" name="lname" value=""><br><br>
-            <input type="submit" value="Submit">
+            <div class="input-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="Nome" name="nome" placeholder="Insira seu nome" />
+            </div>
+
+            <div class="input-group">
+                <label for="Pontos">Pontos:</label>
+                <input type="text" id="pontos" placeholder="Insira os seus pontos" />
+            </div>
+
+            <div class="input-group">
+                <label for="notas">Notas:</label>
+                <input type="text" id="notas" placeholder="Insira a sua nota" />
+            </div>
+
+            <div class="input-group">
+                <label for="universidade">Universidade:</label>
+                <input type="text" id="universidade" placeholder="Insira a sua universidade" />
+            </div>
+
+           <div class="input-group">
+                <label for="empresas">Empresas:</label>
+                <input type="text" id="empresas" placeholder="Insira sua empresa" />
+            </div>
+
+            <div class="input-group">
+                <label for="avarts">Avarts:</label>
+                <input type="text" id="avarts" placeholder="Insira seu avarts" />
+            </div>
+
+            <div class="input-group">
+                <label for="horario">Horario:</label>
+                <input type="text" id="horario" placeholder="Insira o horario" />
+            </div>
+
+            <button type="button" class="botao" onclick="validar">Submit</button>
       </form>
+      <script>
+        function validar(){
+            var nome = document.getElementById("nome");
+            console.log ("var nome:", nome)
+
+            if(nome.value == ""){
+                
+                alert("Nome não informado");
+                nome.focus();
+            }
+        }
+      </script>
+  </body>
 </html>
