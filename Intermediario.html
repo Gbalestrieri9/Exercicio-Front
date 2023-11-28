@@ -44,18 +44,29 @@
                 <label for="horario">Horario:</label>
                 <input type="text" id="horario" placeholder="Insira o horario" />
             </div>
+            <div id="erro">
+
+            </div>
 
             <button type="button" class="botao" onclick="validar()">Submit</button>
       </form>
       <script>
         function validar(){
-            var nome = document.getElementById("nome");
-            console.log ("var nome:", nome)
+            var nome = document.getElementById("nome").value;
+            var pontos = document.getElementById("pontos").value;
+            var notas = document.getElementById("notas").value;
+            var universidade = document.getElementById("universidade").value;
+            var empresas = document.getElementById("empresas").value;
+            var avarts = document.getElementById("avarts").value;
+            var horario = document.getElementById("horario").value;
+            
 
-            if(nome.value == ""){
+            if(nome == "" ||pontos == "" || notas == "" || universidade == "" || empresas == "" || avarts == "" || horario == ""){
                 
-                alert("Nome não informado");
-                nome.focus();
+                document.getElementById("erro").innerHTML = "Campos obrigatorios não informados";
+                
+            } else {
+                document.getElementById("erro").innerHTML = "";
             }
         }
       </script>
